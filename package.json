@@ -1,0 +1,82 @@
+{
+  "name": "users-management",
+  "version": "0.0.1",
+  "description": "description",
+  "author": "Alfredo Benassi",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "prestart:prod": "rm -rf dist && tsc",
+    "start:prod": "node dist/main.js",
+    "start:hmr": "node dist/server",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^5.3.7",
+    "@nestjs/core": "^5.3.7",
+    "@nestjs/mongoose": "^5.2.1",
+    "@nestjs/passport": "^1.1.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^6.0.0",
+    "fastify": "^1.11.2",
+    "fastify-formbody": "^2.0.1",
+    "helmet": "^3.13.0",
+    "lodash": "^4.17.10",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.2.9",
+    "nodemailer": "^4.6.8",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "password-generator": "^2.2.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.3.2",
+    "typescript": "^2.6.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^5.3.7",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.0.39",
+    "@types/helmet": "0.0.41",
+    "@types/jest": "^21.1.8",
+    "@types/lodash": "^4.14.116",
+    "@types/mongoose": "^5.2.5",
+    "@types/node": "^9.6.32",
+    "@types/nodemailer": "^4.6.5",
+    "@types/passport": "^0.4.6",
+    "@types/passport-http-bearer": "^1.0.33",
+    "@types/supertest": "^2.0.6",
+    "@types/uuid": "^3.4.4",
+    "jest": "^21.2.1",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.14.3",
+    "supertest": "^3.3.0",
+    "ts-jest": "^21.2.4",
+    "ts-loader": "^4.1.0",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.6.0",
+    "tslint": "5.3.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  }
+}
